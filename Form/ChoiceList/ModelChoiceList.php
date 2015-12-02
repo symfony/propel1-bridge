@@ -105,7 +105,7 @@ class ModelChoiceList extends ObjectChoiceList
             $this->identifier = $this->query->getTableMap()->getPrimaryKeys();
         }
 
-        $this->loaded = is_array($choices) || $choices instanceof \Traversable;
+        $this->loaded = (is_array($choices) && array() !== $choices) || $choices instanceof \Traversable;
 
         if ($preferred instanceof \ModelCriteria) {
             $this->preferredQuery = $preferred->mergeWith($this->query);
