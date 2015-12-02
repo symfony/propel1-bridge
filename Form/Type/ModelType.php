@@ -104,6 +104,7 @@ class ModelType extends AbstractType
             'query' => null,
             'choices' => null,
             'choice_list' => $choiceList,
+            'choices_as_values' => true,
             'group_by' => null,
             'by_reference' => false,
             'index_property' => null,
